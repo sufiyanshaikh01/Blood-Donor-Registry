@@ -24,17 +24,17 @@ A full-stack web application designed to manage blood donor registrations and se
 
 **I- Navigate to the backend directory:** cd backend.<br>
 
-II- **Run the server:** go run main.go.<br>
+**II- Run the server:** go run main.go.<br>
 
-III- **The API will be available at:** http://localhost:8080.<br>
+**III- The API will be available at:** http://localhost:8080.<br>
 
 ***2. Frontend (React)*** <br>
 
-I- **Navigate to the frontend directory:** cd forntend.<br>
+**I- Navigate to the frontend directory:** cd forntend.<br>
 
-II- **Install dependencies:** npm install.<br>
+**II- Install dependencies:** npm install.<br>
 
-III- **Start the development server**: npm start.<br>
+**III- Start the development server**: npm start.<br>
 
 # 🔌 API Features <br>
 
