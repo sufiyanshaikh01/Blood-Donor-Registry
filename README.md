@@ -2,19 +2,21 @@
 Blood Donor Registry <br>
 A full-stack web application designed to manage blood donor registrations and search for donors by blood group. This project was built to practice API development and frontend-backend integration.
 
-🛠️ Tech Stack <br>
-Frontend: React.js
+# 🛠️ Tech Stack <br>
 
-Backend: Go (Golang)
+- Frontend: React.js
 
-Database: CSV File (donors.csv)
+- Backend: Go (Golang)
 
-Version Control: Git & GitHub
+- Database: CSV File (donors.csv)
 
-📂 Project Structure <br>
-backend/: Contains the Go source code (main.go) and the CSV file used for data storage.
+- Version Control: Git & GitHub
 
-forntend/: Contains the React application, including the main logic in App.js.
+# 📂 Project Structure <br>
+
+- **backend/**: Contains the Go source code (main.go) and the CSV file used for data storage.<br>
+
+- **forntend/**: Contains the React application, including the main logic in App.js.<br>
 
 🚀 How to Run <br>
 1. Backend (Go) <br>
