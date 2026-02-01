@@ -98,6 +98,15 @@ func donorHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func downloadHandler(w http.ResponseWriter, r *http.Request) {
+	// Batana ki yeh ek file download hai
+	w.Header().Set("Content-Disposition", "attachment; filename=donors_list.csv")
+	w.Header().Set("Content-Type", "text/csv")
+
+	// File read karke user ko bhej dena
+	http.ServeFile(w, r, csvFile)
+}
+
 func main() {
 	http.HandleFunc("/donors", donorHandler)
 	fmt.Println("Server running on :8080. Data saving to donors.csv")
