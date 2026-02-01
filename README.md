@@ -17,21 +17,21 @@ backend/: Contains the Go source code (main.go) and the CSV file used for data s
 forntend/: Contains the React application, including the main logic in App.js.
 
 🚀 How to Run <br>
-1. Backend (Go)
+1. Backend (Go) <br>
 Navigate to the backend directory: cd backend.
 
 Run the server: go run main.go.
 
 The API will be available at http://localhost:8080.
 
-2. Frontend (React)
+2. Frontend (React) <br>
 Navigate to the frontend directory: cd forntend.
 
 Install dependencies: npm install.
 
 Start the development server: npm start.
 
-🔌 API Features
+🔌 API Features <br>
 Fetch Donors: Retrieves a list of donors from the Go server.
 
 Filter: Allows filtering donors based on specific blood groups using query parameters.
