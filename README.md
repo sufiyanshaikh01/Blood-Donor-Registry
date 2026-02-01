@@ -4,13 +4,13 @@ A full-stack web application designed to manage blood donor registrations and se
 
 # 🛠️ Tech Stack <br>
 
-- Frontend: React.js
+- **Frontend:** React.js
 
-- Backend: Go (Golang)
+- **Backend:** Go (Golang)
 
-- Database: CSV File (donors.csv)
+- **Database:** CSV File (donors.csv)
 
-- Version Control: Git & GitHub
+- **Version Control:** Git & GitHub
 
 # 📂 Project Structure <br>
 
@@ -20,21 +20,21 @@ A full-stack web application designed to manage blood donor registrations and se
 
 # 🚀 How to Run <br>
 
-**1. Backend (Go)** <br>
+***1. Backend (Go)*** <br>
 
-- Navigate to the backend directory: cd backend.<br>
+- **Navigate to the backend directory:** cd backend.<br>
 
-- Run the server: go run main.go.<br>
+- **Run the server:** go run main.go.<br>
 
-- The API will be available at http://localhost:8080.<br>
+- **The API will be available at:** http://localhost:8080.<br>
 
-**2. Frontend (React)** <br>
+***2. Frontend (React)*** <br>
 
-- ***Navigate to the frontend directory:*** cd forntend.<br>
+- **Navigate to the frontend directory:** cd forntend.<br>
 
-- Install dependencies: npm install.<br>
+- **Install dependencies:** npm install.<br>
 
-- Start the development server: npm start.<br>
+- **Start the development server**: npm start.<br>
 
 # 🔌 API Features <br>
 
