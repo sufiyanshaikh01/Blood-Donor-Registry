@@ -22,19 +22,22 @@ A full-stack web application designed to manage blood donor registrations and se
 
 **1. Backend (Go)** <br>
 
-Navigate to the backend directory: cd backend.<br>
-Run the server: go run main.go.<br>
-The API will be available at http://localhost:8080.<br>
+- Navigate to the backend directory: cd backend.<br>
+
+- Run the server: go run main.go.<br>
+
+- The API will be available at http://localhost:8080.<br>
 
 **2. Frontend (React)** <br>
 
-Navigate to the frontend directory: cd forntend.<br>
+- Navigate to the frontend directory: cd forntend.<br>
 
-Install dependencies: npm install.<br>
+- Install dependencies: npm install.<br>
 
-Start the development server: npm start.<br>
+- Start the development server: npm start.<br>
 
-🔌 API Features <br>
+# 🔌 API Features <br>
+
 Fetch Donors: Retrieves a list of donors from the Go server.
 
 Filter: Allows filtering donors based on specific blood groups using query parameters.
