@@ -1,4 +1,3 @@
-# Blood-Donor-Registry
 # Blood Donor Registry <br>
 A full-stack web application designed to manage blood donor registrations and search for donors by blood group. This project was built to practice API development and frontend-backend integration.
 
