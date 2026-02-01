@@ -18,12 +18,13 @@ A full-stack web application designed to manage blood donor registrations and se
 
 - **forntend/**: Contains the React application, including the main logic in App.js.<br>
 
-🚀 How to Run <br>
-1. Backend (Go) <br>
+# 🚀 How to Run <br>
 
-Navigate to the backend directory: cd backend.
-Run the server: go run main.go.
-The API will be available at http://localhost:8080.
+**1. Backend (Go)** <br>
+
+Navigate to the backend directory: cd backend.<br>
+Run the server: go run main.go.<br>
+The API will be available at http://localhost:8080.<br>
 
 **2. Frontend (React)** <br>
 
