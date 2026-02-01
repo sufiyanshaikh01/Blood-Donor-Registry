@@ -30,7 +30,7 @@ A full-stack web application designed to manage blood donor registrations and se
 
 **2. Frontend (React)** <br>
 
-- Navigate to the frontend directory: cd forntend.<br>
+- ***Navigate to the frontend directory:*** cd forntend.<br>
 
 - Install dependencies: npm install.<br>
 
@@ -38,6 +38,6 @@ A full-stack web application designed to manage blood donor registrations and se
 
 # 🔌 API Features <br>
 
-Fetch Donors: Retrieves a list of donors from the Go server.
+- **Fetch Donors:** Retrieves a list of donors from the Go server.
 
-Filter: Allows filtering donors based on specific blood groups using query parameters.
+- **Filter:** Allows filtering donors based on specific blood groups using query parameters.
