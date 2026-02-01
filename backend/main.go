@@ -80,10 +80,10 @@ func donorHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		json.NewEncoder(w).Encode(d)
 
-	} else if r.Method == "GET" { kil
+	} else if r.Method == "GET" {
 		donors, _ := readFromCSV()
 		group := r.URL.Query().Get("blood_group")
-		
+
 		if group != "" {
 			filtered := []Donor{}
 			for _, d := range donors {
