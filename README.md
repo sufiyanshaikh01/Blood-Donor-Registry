@@ -26,7 +26,9 @@ The API will be available at http://localhost:8080.
 **2. Frontend (React)** <br>
 
 Navigate to the frontend directory: cd forntend.<br>
+
 Install dependencies: npm install.<br>
+
 Start the development server: npm start.<br>
 
 🔌 API Features <br>
