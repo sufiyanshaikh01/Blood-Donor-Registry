@@ -22,7 +22,7 @@ A full-stack web application designed to manage blood donor registrations and se
 
 ***1. Backend (Go)*** <br>
 
-I- **Navigate to the backend directory:** cd backend.<br>
+**I- Navigate to the backend directory:** cd backend.<br>
 
 II- **Run the server:** go run main.go.<br>
 
