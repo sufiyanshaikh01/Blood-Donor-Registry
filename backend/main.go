@@ -109,6 +109,7 @@ func downloadHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/donors", donorHandler)
+	http.HandleFunc("/download", downloadHandler)
 	fmt.Println("Server running on :8080. Data saving to donors.csv")
 	http.ListenAndServe(":8080", nil)
 }
