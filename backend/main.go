@@ -99,7 +99,6 @@ func donorHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func downloadHandler(w http.ResponseWriter, r *http.Request) {
-	// Batana ki yeh ek file download hai
 	w.Header().Set("Content-Disposition", "attachment; filename=donors_list.csv")
 	w.Header().Set("Content-Type", "text/csv")
 
