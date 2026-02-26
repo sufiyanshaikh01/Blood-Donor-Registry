@@ -130,6 +130,16 @@ func donorHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			json.NewEncoder(w).Encode(donors)
 		}
+	} else if r.Method == "DELETE" {
+		phone := r.URL.Query().Get("phone")
+		deleteDonor(phone)
+		w.WriteHeader(http.StatusOK)
+	} else if r.Method == "PUT" {
+		var updatedDonor Donor
+		json.NewDecoder(r.Body).Decode(&updatedDonor)
+		deleteDonor(updatedDonor.Phone)
+		saveToCSV(updatedDonor)
+		json.NewEncoder(w).Encode(updatedDonor)
 	}
 }
 
