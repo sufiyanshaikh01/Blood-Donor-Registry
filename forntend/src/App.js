@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 
 const BloodDonorApp = () => {
   const [donors, setDonors] = useState([]);
@@ -69,7 +69,9 @@ const BloodDonorApp = () => {
           <option value="O+">O+</option>
           <option value="O-">O-</option>
           <option value="A+">A+</option>
+          <option value="A-">A-</option>
           <option value="B+">B+</option>
+          <option value="B-">B-</option>
         </select>
       </div>
 

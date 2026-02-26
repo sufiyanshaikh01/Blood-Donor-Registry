@@ -3,9 +3,11 @@ package main
 import (
 	"encoding/csv"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"os"
+	"regexp"
 	"strings"
 )
 
@@ -18,8 +20,19 @@ type Donor struct {
 
 const csvFile = "donors.csv"
 
+func validatePhone(phone string) error {
+	re := regexp.MustCompile(`^[0-9]{10}$`)
+	if !re.MatchString(phone) {
+		return errors.New("phone number must be exactly 10 digits")
+	}
+	return nil
+}
+
 // CSV mein data save karne ka function
 func saveToCSV(d Donor) error {
+	if err := validatePhone(d.Phone); err != nil {
+		return err
+	}
 	f, err := os.OpenFile(csvFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
@@ -73,13 +86,16 @@ func donorHandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == "POST" {
 		var d Donor
-		json.NewDecoder(r.Body).Decode(&d)
+
+		if err := json.NewDecoder(r.Body).Decode(&d); err != nil {
+			http.Error(w, "Invalid JSON", http.StatusBadRequest)
+			return
+		}
 		if err := saveToCSV(d); err != nil {
-			http.Error(w, "Error saving data", 500)
+			http.Error(w, err.Error(), http.StatusBadRequest)
 			return
 		}
 		json.NewEncoder(w).Encode(d)
-
 	} else if r.Method == "GET" {
 		donors, _ := readFromCSV()
 		group := r.URL.Query().Get("blood_group")
