@@ -74,6 +74,25 @@ func readFromCSV() ([]Donor, error) {
 	return donors, nil
 }
 
+func deleteDonor(phone string) error {
+	donors, _ := readFromCSV()
+	f, err := os.Create(csvFile)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	writer := csv.NewWriter(f)
+	defer writer.Flush()
+
+	for _, d := range donors {
+		if d.Phone != phone {
+			writer.Write([]string{d.Name, d.BloodGroup, d.Phone, d.City})
+		}
+	}
+	return nil
+}
+
 func donorHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
