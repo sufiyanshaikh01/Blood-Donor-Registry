@@ -26,6 +26,17 @@ const BloodDonorApp = () => {
       setIsLoading(false);
     }
   };
+  const handleDelete = async (phone) => {
+  if (window.confirm("Are You Delete Your data")) {
+    await fetch(`http://localhost:8080/donors?phone=${phone}`, { method: 'DELETE' });
+    fetchDonors(); 
+  }
+};
+
+const handleEdit = (donor) => {
+  setFormData(donor); 
+  window.scrollTo(0, 0); 
+};
 
   useEffect(() => { fetchDonors(); }, [filter]);
 
