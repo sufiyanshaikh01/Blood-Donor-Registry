@@ -26,10 +26,20 @@ const BloodDonorApp = () => {
       setIsLoading(false);
     }
   };
-  const handleDelete = async (phone) => {
-  if (window.confirm("Are You Delete Your data")) {
-    await fetch(`http://localhost:8080/donors?phone=${phone}`, { method: 'DELETE' });
-    fetchDonors(); 
+const handleDelete = async (phone) => {
+  try {
+    // Check karein ki yahan http:// aur localhost:8080 sahi se likha hai
+    const response = await fetch(`http://localhost:8080/donors?phone=${phone}`, { 
+      method: 'DELETE' 
+    });
+    
+    if (response.ok) {
+      fetchDonors();
+    } else {
+      console.error("Server error");
+    }
+  } catch (error) {
+    console.error("Backend Can't connect:", error);
   }
 };
 
@@ -95,8 +105,18 @@ const handleEdit = (donor) => {
         <ul style={styles.list}>
           {donors.length > 0 ? donors.map((d, i) => (
             <li key={i} style={styles.listItem}>
-              <strong>{d.name}</strong> - <span style={{color: 'red'}}>{d.blood_group}</span> | 📞 {d.phone} | 📍 {d.city}
-            </li>
+  <div>
+    <strong>{d.name}</strong> - <span style={{color: 'red'}}>{d.blood_group}</span> | 📞 {d.phone} | 📍 {d.city}
+  </div>
+  <div style={{ marginTop: '10px' }}>
+    <button onClick={() => handleEdit(d)} style={styles.editBtn}>
+      ✏️ Edit
+    </button>
+    <button onClick={() => handleDelete(d.phone)} style={styles.deleteBtn}>
+      🗑️ Delete
+    </button>
+  </div>
+</li>
           )) : <p>No donors found.</p>}
         </ul>
       )}
